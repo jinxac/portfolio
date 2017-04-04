@@ -8,6 +8,7 @@ const autoprefixer = require("autoprefixer");
 const BUILD_DIR = path.resolve(__dirname, "build");
 const APP_DIR = path.resolve(__dirname, "src");
 
+// https://github.com/postcss/postcss-loader/issues/92
 const plugins = [
   new HtmlWebpackPlugin({
     template: "index.ejs"
@@ -21,7 +22,8 @@ const plugins = [
             "last 3 version",
             "ie >= 10"
           ]
-        })
+        }),
+        require("postcss-import")
       ]
     }
   })
@@ -43,7 +45,7 @@ const rules = [
     use: "url-loader?limit=20480&name=assets/[name]-[hash].[ext]"
   },
   {
-    test: /\.css$/,
+    test: /\.css/,
     loader: ExtractTextPlugin.extract({
       fallbackLoader: "style-loader",
       loader: "css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader"

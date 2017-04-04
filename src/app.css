@@ -1,6 +1,9 @@
+@import "check.css";
+
 .element {
+  color: var(--text-color);
   background-color: blue;
-  color: white;
+  /*color: white;*/
   font-size: 20px;
   padding: 20px;
   display:flex;
