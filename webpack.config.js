@@ -23,7 +23,8 @@ const plugins = [
             "ie >= 10"
           ]
         }),
-        require("postcss-import")
+        require("postcss-import"),
+        require("postcss-custom-media")
       ]
     }
   })
@@ -42,7 +43,7 @@ const rules = [
   },
   {
     test: /\.(png|gif|jpg|svg)$/,
-    use: "url-loader?limit=20480&name=assets/[name]-[hash].[ext]"
+    use: "url-loader?limit=100000"
   },
   {
     test: /\.css/,

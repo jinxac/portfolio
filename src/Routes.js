@@ -1,6 +1,6 @@
 import React from "react";
 import {Router,Route,browserHistory} from "react-router";
-import Home from "./Home";
+import Home from "./home";
 
 const PortfolioRoutes = () => (
   <Router history={browserHistory}>
