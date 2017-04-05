@@ -1,0 +1,25 @@
+.avatarContainer {
+  background-color: #458;
+  height: 50vh;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  composes: primaryText from "../common/primaryText.css";
+  font-size:20px;
+  color: white;
+  text-transform: uppercase;
+  display: block;
+}
+
+.jobRole {
+  composes: primaryText from "../common/primaryText.css";
+  font-size:14px;
+  color:#D3D3D3;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 300;
+}
